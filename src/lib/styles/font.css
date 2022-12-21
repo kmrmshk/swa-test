@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'fingger';
+  src:
+    url('/assets/fonts/fingger.ttf?3ks7n8') format('truetype'),
+    url('/assets/fonts/fingger.woff?3ks7n8') format('woff'),
+    url('/assets/fonts/fingger.svg?3ks7n8#fingger') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fingger' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fingger-menu:before {
+  content: "\e901";
+}
+.fingger-menu-collapse:before {
+  content: "\e92f";
+}
+.fingger-share:before {
+  content: "\e902";
+}
+.fingger-download:before {
+  content: "\e93c";
+}
+.fingger-logout:before {
+  content: "\e905";
+}
+.fingger-launch:before {
+  content: "\e903";
+}
+.fingger-clone:before {
+  content: "\e92a";
+}
+.fingger-dock-finger:before {
+  content: "\e937";
+}
+.fingger-close:before {
+  content: "\e904";
+}
+.fingger-more:before {
+  content: "\e906";
+}
+.fingger-alert:before {
+  content: "\e907";
+}
+.fingger-search:before {
+  content: "\e909";
+}
+.fingger-camera:before {
+  content: "\e90a";
+}
+.fingger-bag:before {
+  content: "\e90b";
+}
+.fingger-gacha:before {
+  content: "\e90c";
+}
+.fingger-question-circle:before {
+  content: "\e92d";
+}
+.fingger-list:before {
+  content: "\e90d";
+}
+.fingger-sticky-note:before {
+  content: "\e939";
+}
+.fingger-calendar:before {
+  content: "\e93b";
+}
+.fingger-comment:before {
+  content: "\e90f";
+}
+.fingger-comment-hashed:before {
+  content: "\e92b";
+}
+.fingger-speech-balloon:before {
+  content: "\e91a";
+}
+.fingger-crown:before {
+  content: "\e910";
+}
+.fingger-crecent-moon:before {
+  content: "\e911";
+}
+.fingger-moon:before {
+  content: "\e912";
+}
+.fingger-arrow-right:before {
+  content: "\e914";
+}
+.fingger-arrow-left:before {
+  content: "\e915";
+}
+.fingger-arrow-up:before {
+  content: "\e916";
+}
+.fingger-arrow-down:before {
+  content: "\e917";
+}
+.fingger-gamepad:before {
+  content: "\e918";
+}
+.fingger-gamepad-classic:before {
+  content: "\e930";
+}
+.fingger-clock:before {
+  content: "\e925";
+}
+.fingger-clock-framed:before {
+  content: "\e924";
+}
+.fingger-timer:before {
+  content: "\e919";
+}
+.fingger-gift:before {
+  content: "\e91b";
+}
+.fingger-gift-invalid:before {
+  content: "\e936";
+}
+.fingger-gift-invalid-outline:before {
+  content: "\e938";
+}
+.fingger-face:before {
+  content: "\e923";
+}
+.fingger-eye:before {
+  content: "\e90e";
+}
+.fingger-visible:before {
+  content: "\e927";
+}
+.fingger-invisible:before {
+  content: "\e928";
+}
+.fingger-human-bag:before {
+  content: "\e91c";
+}
+.fingger-human-gift:before {
+  content: "\e933";
+}
+.fingger-human-balloon:before {
+  content: "\e91d";
+}
+.fingger-human-key:before {
+  content: "\e931";
+}
+.fingger-human-human:before {
+  content: "\e932";
+}
+.fingger-arrow-rise-right:before {
+  content: "\e93a";
+}
+.fingger-heart:before {
+  content: "\e908";
+}
+.fingger-thumbs-up:before {
+  content: "\e934";
+}
+.fingger-thumbs-up-outline:before {
+  content: "\e935";
+}
+.fingger-thunder:before {
+  content: "\e913";
+}
+.fingger-star:before {
+  content: "\e92e";
+}
+.fingger-expand:before {
+  content: "\e91e";
+}
+.fingger-shrink:before {
+  content: "\e91f";
+}
+.fingger-menu-open:before {
+  content: "\e920";
+}
+.fingger-menu-close:before {
+  content: "\e921";
+}
+.fingger-gear:before {
+  content: "\e922";
+}
+.fingger-checked:before {
+  content: "\e900";
+}
+.fingger-flag:before {
+  content: "\e92c";
+}
+.fingger-building:before {
+  content: "\e93d";
+}
+.fingger-locked:before {
+  content: "\e926";
+}
+.fingger-opened:before {
+  content: "\e929";
+}

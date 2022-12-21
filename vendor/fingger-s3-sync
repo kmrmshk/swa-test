@@ -1,0 +1,76 @@
+#!/bin/bash
+set -eu
+
+SCRIPT_DIR=`dirname $0`
+cd $SCRIPT_DIR
+
+declare -a KEYS=(
+	"local"
+	"dev"
+	"stg"
+	"prd"
+	"qa1"
+	"qa2"
+	"qa3"
+	"qa4"
+	"qa5"
+	"qa6"
+)
+declare -a PATHS=(
+	"../public/s3"
+	"s3://dev-fingger-assets"
+	"s3://stg-fingger-assets"
+	"s3://prd-fingger-assets"
+	"s3://qa1-fingger-assets"
+	"s3://qa2-fingger-assets"
+	"s3://qa3-fingger-assets"
+	"s3://qa4-fingger-assets"
+	"s3://qa5-fingger-assets"
+	"s3://qa6-fingger-assets"
+)
+# option_path=""
+option_path="/platform/banners"
+count=0
+
+set-path() {
+	key=$1
+
+	temp=`echo ${KEYS[@]}`
+	newArray=( ${temp%%${key}*} )
+
+	index=${#newArray[@]}
+
+	if [[ $key =~ ^--path= ]]; then
+		option_path="/$(echo $key | sed -e 's/^--path=//')"
+	elif [[ ${#key} < 3 ]] || [[ ${#KEYS[@]} == ${#newArray[@]} ]]; then
+		echo "'${key}' doesn't exist in list(${KEYS[@]})"
+	else
+		if [ "$count" = 0 ]; then
+			copy_from="${PATHS[$index]}"
+		elif [ "$count" = 1 ]; then
+			copy_to="${PATHS[$index]}"
+		else
+			copy_to=("${copy_to[@]}" "${PATHS[$index]}")
+		fi
+		count=`expr $count + 1`
+	fi
+}
+
+for arg; do
+	set-path "$arg"
+done
+
+if [ "$count" -lt 2 ]; then
+	echo "[Error] Canceled because there are few arguments"
+	echo "[usage] ./fingger-s3-sync <from> <to> [<to>...] [--path=<option_path>]"
+	echo "* Select <from> or <to> from '${KEYS[@]}'"
+	exit 0
+fi
+
+echo "sync from: ${copy_from}${option_path}"
+for v in "${copy_to[@]}"; do
+	echo "sync to: ${v}${option_path}"
+	aws s3 sync "${copy_from}${option_path}" "${v}${option_path}"
+done
+
+echo "[Finish]"

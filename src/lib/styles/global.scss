@@ -1,0 +1,107 @@
+/* Utilities */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    @apply flex flex-col relative w-full h-full;
+}
+
+main {
+    /* 文字色 */
+    @apply text-base-dark text-opacity-87 dark:(text-base-light);
+}
+
+/* テーマ切り替え共通スタイル */
+.fi-bg-base {
+    @apply dark:(bg-gray-900);
+}
+.fi-bg-overlay {
+    @apply dark:(bg-white bg-opacity-5);
+}
+
+.fi-lb {
+    line-break: anywhere;
+}
+
+.fi-lb-strict {
+	line-break: strict;
+}
+
+.fi-text {
+    @apply text-base-dark text-opacity-87 dark:(text-white text-opacity-87);
+}
+
+.fi-text-sub {
+    @apply text-base-dark text-opacity-60 dark:(text-white text-opacity-60);
+}
+
+.fi-article {
+	line-height: 1.625;
+	word-wrap: break-word;
+	line-break: strict;
+
+	a {
+		@apply text-primary-light;
+	}
+	p + p {
+		margin: 1.5rem 0 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 1.25rem 0;
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+}
+
+.fi-article.compact {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	p + p {
+		margin: 1.25rem 0 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 1.25rem 0;
+		font-size: 0.875rem;
+		font-weight: bold;
+	}
+}
+
+.dark .fi-article a {
+	@apply text-primary-dark;
+}
+
+.fi-border {
+    @apply border-base-dark border-opacity-12 dark:(border-white border-opacity-12);
+}
+
+.fi-anchor,
+a {
+    @apply transition-colors duration-100 hover:text-primary-light ease-in dark:hover:text-primary-dark;
+}
+
+.fi-img-center {
+    @apply absolute m-auto;
+    top: -10000px;
+    bottom: -10000px;
+    right: -10000px;
+    left: -10000px;
+}
+
+.fi-ffs-palt {
+	font-feature-settings: "palt";
+}
+
+.fi-border,
+h1,h2,h3,h4,h5,h6,ul,li,p,hr {
+    @apply border-base-dark border-opacity-12 dark:(border-white border-opacity-12);
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p {
+    @apply fi-lb fi-ffs-palt;
+    @apply text-base-dark text-opacity-87 dark:(text-white text-opacity-87);
+}

@@ -1,0 +1,32 @@
+{
+	"name": "fingger（フィンガー）",
+	"short_name": "fingger",
+	"homepage_url": "https://fingger.com",
+	"start_url": "/",
+	"display": "minimal-ui",
+	"description": "fingger（フィンガー）は、ライブ配信に視聴者がコメントやアイテムで参加できるYouTube ライブで遊べる参加型ゲームプラットフォームです。",
+	"default_locale": "ja",
+    "theme": {
+        "headerUrl": {
+            "images": ""
+        },
+        "colors": {
+            "accentxolor": "#935ac1",
+            "textcolor": "#333"
+        }
+    },
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"icons": [
+		{
+			"src": "logo-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "logo-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

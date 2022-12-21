@@ -1,0 +1,14 @@
+<svg id="Icon-Share-Copy" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="グループ_481" data-name="グループ 481">
+    <g id="楕円形_61" data-name="楕円形 61" fill="#ededee" stroke="rgba(26,32,46,0.12)" stroke-width="1">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="29.5" fill="none"/>
+    </g>
+  </g>
+  <g id="Icon-Copy" transform="translate(14 14)">
+    <rect id="Boundary" width="32" height="32" fill="none"/>
+    <g id="グループ_159" data-name="グループ 159" transform="translate(2 1)">
+      <path id="パス_278" data-name="パス 278" d="M21.895,1H4.842A2.8,2.8,0,0,0,2,3.727V22.818H4.842V3.727H21.895Zm4.263,5.455H10.526A2.8,2.8,0,0,0,7.684,9.182V28.273A2.8,2.8,0,0,0,10.526,31H26.158A2.8,2.8,0,0,0,29,28.273V9.182A2.8,2.8,0,0,0,26.158,6.455Zm0,21.818H10.526V9.182H26.158Z" transform="translate(-2 -1)" fill="rgba(26,32,46,0.87)"/>
+    </g>
+  </g>
+</svg>

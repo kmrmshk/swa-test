@@ -1,0 +1,37 @@
+/* スクロール */
+.app-container:not(.mobile) ::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background: transparent;
+}
+
+.app-container:not(.mobile) ::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.01);
+}
+
+.app-container:not(.mobile) ::-webkit-scrollbar-thumb {
+	background-color:  #d1d5db;
+	background-clip: content-box;
+}
+
+.app-container:not(.mobile).dark ::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.app-container:not(.mobile) ::-webkit-scrollbar-thumb:vertical {
+	min-height: 24px;
+}
+
+.app-container:not(.mobile) ::-webkit-scrollbar-thumb:horizontal {
+	min-width: 24px;
+}
+
+/* firefox */
+html {
+	scrollbar-width: thin;
+	scrollbar-color: #d1d5db transparent;
+}
+
+html .dark{
+	scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
